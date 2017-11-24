@@ -1,0 +1,23 @@
+apiVersion: batch/v2alpha1
+kind: CronJob
+metadata:
+  name: jms-producer-batch-cron-job
+spec:
+  schedule: "*/2 * * * *"
+  jobTemplate:             
+    spec:
+      template:
+        metadata:
+          labels:          
+            parent: "jms-producer-batch-cron-job"
+        spec:
+          containers:
+            - name: jms-batch-producer
+              image: 172.30.1.1:5000/amm-demo/jms-producer-batch
+              env:
+                - name: JAVA_APP_JAR
+                  value: jms-producer-batch-jar-with-dependencies.jar
+          restartPolicy: OnFailure
+  successfulJobsHistoryLimit: 1
+  failedJobsHistoryLimit: 1
+  

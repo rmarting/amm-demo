@@ -1,0 +1,13 @@
+swarm:
+  datasources:
+    data-sources:
+      CatalogDS:
+        driver-name: mysql
+        connection-url: jdbc:mysql://mysql:3306/catalogdb
+        user-name: mysql
+        password: mysql
+  messaging-activemq:
+    servers:
+      default:
+        jms-queues:
+          Catalog: {}

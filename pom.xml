@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<groupId>org.rmarting</groupId>
+	<artifactId>amm-demo</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<name>AMM :: DEMO</name>
+	<description>
+		Application Modernization and Migration Demo
+	</description>
+
+	<modules>
+		<module>jee-web-application</module>
+		<module>jee-web-application-wildfly-swarm</module>
+		<module>jms-producer-batch</module>
+		<module>jms-consumer-apache-camel</module>
+	</modules>
+
+</project>
