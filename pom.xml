@@ -18,6 +18,7 @@
 		<module>jee-web-application-wildfly-swarm</module>
 		<module>jms-producer-batch</module>
 		<module>jms-consumer-apache-camel</module>
+		<module>jms-consumer-fuse7</module>
 	</modules>
 
 </project>

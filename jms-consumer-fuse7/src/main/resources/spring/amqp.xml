@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd        http://camel.apache.org/schema/spring       http://camel.apache.org/schema/spring/camel-spring.xsd">
+
+	<!-- JMS AMQP Beans Configuration -->
+	<bean id="jmsConnectionFactory"
+		class="org.apache.qpid.jms.JmsConnectionFactory" primary="true">
+		<property name="remoteURI"
+			value="amqp://${amqp.host}:${amqp.port}" />
+		<property name="username" value="${amqp.username}" />
+		<property name="password" value="${amqp.password}" />
+	</bean>
+
+	<bean id="jmsCachingConnectionFactory"
+		class="org.springframework.jms.connection.CachingConnectionFactory">
+		<property name="targetConnectionFactory"
+			ref="jmsConnectionFactory" />
+	</bean>
+
+	<bean id="jmsConfig"
+		class="org.apache.camel.component.jms.JmsConfiguration">
+		<property name="connectionFactory"
+			ref="jmsCachingConnectionFactory" />
+		<property name="cacheLevelName" value="CACHE_CONSUMER" />
+	</bean>
+
+	<bean id="amqp"
+		class="org.apache.camel.component.amqp.AMQPComponent">
+		<property name="configuration" ref="jmsConfig" />
+	</bean>
+
+</beans>
