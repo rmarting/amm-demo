@@ -8,7 +8,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>AMM :: DEMO :: Fabric8 :: Spring-Boot :: Apache Camel</name>
+	<name>AMM :: DEMO :: Spring-Boot :: Apache Camel</name>
 	<description>
 		Spring Boot example running a Camel route to insert data into a database
 	</description>

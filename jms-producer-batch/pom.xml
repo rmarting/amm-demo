@@ -6,7 +6,7 @@
 	<artifactId>jms-producer-batch</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 
-	<name>AMM :: DEMO :: Fabric8 :: Java :: Main</name>
+	<name>AMM :: DEMO :: Java :: Main</name>
 	<description>
 		Java Main application to send information to a JMS Messaging System
 	</description>
