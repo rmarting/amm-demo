@@ -26,8 +26,8 @@ import org.slf4j.LoggerFactory;
  */
 public class Main {
 
-	private static final String[] ARTITS = new String[] { "Madonna", "Eminem", "Michael Jackson", "Heroes del Silencio",
-			"Bruce Sprinsteen", "Beyonce" };
+	private static final String[] ARTITS = new String[] { "AMM - Madonna", "AMM - Eminem", "AMM - Michael Jackson", "AMM - Heroes del Silencio",
+			"AMM - Bruce Sprinsteen", "AMM - Beyonce" };
 
 	private static final String[] TITLES = new String[] { "Rebel Heart", "Erotica", "Like a Virgin", "Recovery",
 			"Infinite", "Encore", "Bad", "Thriller", "Dangerous", "Senderos de Traicion", "El Espiritu del Vino",
