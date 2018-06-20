@@ -15,7 +15,7 @@ import org.rmarting.jee.util.MarshallerUtil;
 /**
  * Message-Driven Bean implementation class for: CatalogMDB
  */
-// FIXME
+// FIXME Comment when messaging services are removed
 //@MessageDriven(
 //	name = "CatalogMDB",
 //	activationConfig = {

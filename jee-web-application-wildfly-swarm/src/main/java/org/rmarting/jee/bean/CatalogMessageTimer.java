@@ -20,12 +20,12 @@ import javax.naming.InitialContext;
 import org.rmarting.jee.model.Catalog;
 import org.rmarting.jee.util.MarshallerUtil;
 
-// FIXME
-// @Singleton
+// FIXME Comment when CronJobs are deployed
+//@Singleton
 public class CatalogMessageTimer {
 
-	private static final String[] ARTITS = new String[] { "Madonna", "Eminem", "Michael Jackson", "Heroes del Silencio",
-			"Bruce Sprinsteen", "Beyonce" };
+	private static final String[] ARTITS = new String[] { "JEE - Madonna", "JEE - Eminem", "JEE - Michael Jackson", "JEE - Heroes del Silencio",
+			"JEE - Bruce Sprinsteen", "JEE - Beyonce" };
 
 	private static final String[] TITLES = new String[] { "Rebel Heart", "Erotica", "Like a Virgin", "Recovery",
 			"Infinite", "Encore", "Bad", "Thriller", "Dangerous", "Senderos de Traicion", "El Espiritu del Vino",
@@ -35,7 +35,7 @@ public class CatalogMessageTimer {
 			"The Best Spanish Rock Band", "The Best", "The Single lady" };
 
 	// FIXME 
-	// @Schedule(hour = "*", minute = "*/2", second = "0", persistent = false)
+	// @Schedule(hour = "*", minute = "*/5", second = "0", persistent = false)
 	public void sendNewCatalogEntry() {
 		String destinationName = "jms/queue/Catalog";
 		Context ic = null;
@@ -45,7 +45,6 @@ public class CatalogMessageTimer {
 		try {
 			ic = new InitialContext();
 
-			// FIXME
 			cf = (ConnectionFactory) ic.lookup("ConnectionFactory");
 			
 			Queue queue = (Queue) ic.lookup(destinationName);

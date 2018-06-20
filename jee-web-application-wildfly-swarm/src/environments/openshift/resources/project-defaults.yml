@@ -6,8 +6,9 @@ swarm:
         connection-url: jdbc:mysql://mysql:3306/catalogdb
         user-name: mysql
         password: mysql
-  messaging-activemq:
-    servers:
-      default:
-        jms-queues:
-          Catalog: {}
+# FIXME: Comment to remove messaging services
+#  messaging-activemq:
+#    servers:
+#      default:
+#        jms-queues:
+#          Catalog: {}
